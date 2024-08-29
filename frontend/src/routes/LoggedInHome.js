@@ -19,7 +19,7 @@ export default function LoggedInHome() {
     };
     getArtistData();
   }, []);
-  console.log(allArtists);
+  // console.log(allArtists);
 
   useLayoutEffect(() => {
     const getAllArtistPlaylist = async () => {
