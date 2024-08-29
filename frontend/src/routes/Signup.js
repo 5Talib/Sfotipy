@@ -36,7 +36,7 @@ export default function Signup() {
       const date = new Date();
       date.setDate(date.getDate() + 30);
       setCookie("token", token, { path: "/", expires: date });
-      navigate("/home");
+      navigate("/");
     } else {
       alert("failure");
     }
@@ -51,7 +51,7 @@ export default function Signup() {
           width="35"
         />
         <div className="text-white font-semibold text-2xl font-sans tracking-tighter">
-          Spotify
+          Sfotipy
         </div>
       </div>
       <div className="inputs w-1/4 py-3 flex flex-col items-center justify-center gap-5">

@@ -23,7 +23,7 @@ export default function Login() {
       const date = new Date();
       date.setDate(date.getDate() + 30);
       setCookie("token", token, { path: "/", expires: date });
-      navigate("/home");
+      navigate("/");
     } else {
       alert("failure");
     }
@@ -39,7 +39,7 @@ export default function Login() {
           width="35"
         />
         <div className="text-white font-semibold text-2xl font-sans tracking-tighter">
-          Spotify
+          Sfotipy
         </div>
       </div>
       <div class="w-1/2 bg-[#141414] rounded-lg flex flex-col items-center">
@@ -75,7 +75,7 @@ export default function Login() {
           <div className="flex flex-row gap-2 mt-4">
             <div className="text-gray-500">Don't have an account? </div>
             <div className="text-white hover:text-[#1ed760] underline cursor-pointer">
-              <Link to="/signup">Sign up for Spotify</Link>
+              <Link to="/signup">Sign up for Sfotipy</Link>
             </div>
           </div>
         </div>
