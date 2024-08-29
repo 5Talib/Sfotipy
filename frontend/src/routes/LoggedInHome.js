@@ -5,10 +5,12 @@ import IconText from "../components/shared/IconText";
 import { Link, useNavigate } from "react-router-dom";
 import LoggedInContainer from "../containers/LoggedInContainer";
 import { makeAuthenicationGETRequest } from "../utils/serverHelpers";
+import { BallTriangle } from "react-loader-spinner";
 
 export default function LoggedInHome() {
   const [allArtists, setAllArtists] = useState([]);
   const [artistPlaylists, setArtistPlaylists] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useLayoutEffect(() => {
     const getArtistData = async () => {
@@ -34,6 +36,7 @@ export default function LoggedInHome() {
           }));
         }
       });
+      setLoading(false);
     };
     if (allArtists.length > 0) {
       getAllArtistPlaylist();
@@ -41,7 +44,11 @@ export default function LoggedInHome() {
   }, [allArtists]);
   return (
     <LoggedInContainer curActiveScreen={"home"}>
-      {artistPlaylists &&
+      {loading ? (
+        <div className="flex justify-center items-center h-screen">
+          <BallTriangle color="#00BFFF" height={100} width={100} />
+        </div>
+      ) : (
         allArtists.map((artist) => {
           const playlists = artistPlaylists[artist._id];
           if (playlists && playlists.length > 0) {
@@ -54,8 +61,8 @@ export default function LoggedInHome() {
             );
           }
           return null;
-        })}
-      ;
+        })
+      )};
     </LoggedInContainer>
   );
 }
