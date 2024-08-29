@@ -34,7 +34,7 @@ function App() {
           >
             <Routes>
               {/* <Route path="/" element={<div className="bg-red-300">hi</div>} /> */}
-              <Route path="/home" element={<LoggedInHome />} />
+              <Route path="/" element={<LoggedInHome />} />
               <Route path="/uploadSong" element={<UploadSong />} />
               <Route path="/myMusic" element={<MyMusic />} />
               <Route path="/search" element={<SearchPage />} />
