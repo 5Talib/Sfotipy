@@ -46,7 +46,7 @@ export default function LoggedInHome() {
     <LoggedInContainer curActiveScreen={"home"}>
       {loading ? (
         <div className="flex justify-center items-center h-screen">
-          <Bars color="#00BFFF" height={80} width={80} />
+          <Bars color="white" height={80} width={80} />
         </div>
       ) : (
         allArtists.map((artist) => {
