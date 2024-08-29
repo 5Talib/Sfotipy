@@ -138,7 +138,7 @@ export default function LoggedInContainer({ children, curActiveScreen }) {
                 width="25"
               />
               <div className="text-white font-semibold text-md font-sans tracking-tighter">
-                Spotify
+                Sfotipy
               </div>
             </div>
             <IconText
