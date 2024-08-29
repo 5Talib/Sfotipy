@@ -27,7 +27,7 @@ export default function UploadSong() {
       alert("Could not create song!");
       return;
     }
-    navigate("/home");
+    navigate("/");
   };
   return (
     <LoggedInContainer>
