@@ -144,7 +144,7 @@ export default function LoggedInContainer({ children, curActiveScreen }) {
             <IconText
               iconName={"material-symbols:home"}
               displayText={"Home"}
-              targetLink={"/home"}
+              targetLink={"/"}
               active={curActiveScreen === "home"}
             />
             <IconText
