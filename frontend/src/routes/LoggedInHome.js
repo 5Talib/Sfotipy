@@ -5,7 +5,7 @@ import IconText from "../components/shared/IconText";
 import { Link, useNavigate } from "react-router-dom";
 import LoggedInContainer from "../containers/LoggedInContainer";
 import { makeAuthenicationGETRequest } from "../utils/serverHelpers";
-import { Circles } from "react-loader-spinner";
+import { Bars } from "react-loader-spinner";
 
 export default function LoggedInHome() {
   const [allArtists, setAllArtists] = useState([]);
@@ -46,7 +46,7 @@ export default function LoggedInHome() {
     <LoggedInContainer curActiveScreen={"home"}>
       {loading ? (
         <div className="flex justify-center items-center h-screen">
-          <Circles color="#00BFFF" height={100} width={100} />
+          <Bars color="#00BFFF" height={80} width={80} />
         </div>
       ) : (
         allArtists.map((artist) => {
